@@ -6,6 +6,7 @@
   --border-color: #8d737c;
   --placeholder-color: #a75874;
   --transition-duration: 0.3s;
+  --price-color: #463337;
 
   /* Цвета из палитриы base-corol: */
 
@@ -32,6 +33,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   color: var(--black-color);
+  background-color: #8d737c;
 }
 
 img {
@@ -112,6 +114,7 @@ a {
 }
 
 .logo {
+  display: block;
   width: 80px;
 }
 
@@ -155,6 +158,79 @@ a {
   flex-basis: 288px;
 }
 
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.product-card__img {
+  height: 180px;
+  flex-shrink: 0;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 100%;
+  padding: 15px;
+}
+.product-card__body-top {
+  margin-bottom: 22px;
+}
+
+.product-card__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.product-card__price {
+  font-size: 18px;
+  color: var(--price-color);
+  font-weight: 700;
+}
+
+.product-card__btn {
+  width: 100%;
+}
+
+.product-card--big {
+  border: none;
+  position: relative;
+  height: 350px;
+}
+
+.product-card__img--big {
+  height: 100%;
+  border-radius: 12px;
+}
+
+.product-card__body--big {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  color: white;
+  align-items: flex-start;
+}
+
+.product-card__price--big {
+  color: white;
+}
+
+.product-card__btn--big {
+    width: initial;
+}
+
 .container {
   max-width: 780px;
   margin: 0 auto;
@@ -164,11 +240,35 @@ a {
 /* Адаптивность: */
 
 @media (max-width: 740px) {
-  body {
+  .callback-form {
+    flex-direction: column;
   }
-}
 
-/* временные стили */
-.row {
-  margin: 10px 0;
+  .callback-form__inp {
+    flex-basis: initial;
+  }
+  .product-card__img {
+    height: 90px;
+  }
+
+  .product-card__body {
+    padding: 10px;
+  }
+  .product-card__body-top {
+    margin-bottom: 22px;
+  }
+
+  .product-card__title {
+    font-size: 14px;
+  }
+
+  .product-card__price {
+    font-size: 14px;
+  }
+  .product-card__img--big {
+    height: 100%;
+  }
+  .product-card__btn--big {
+    width: 100%;
+}
 }

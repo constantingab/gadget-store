@@ -25,40 +25,63 @@
           </li>
         </ul>
       </nav>
-      <div class="row">
-        <a href="" class="default-link">Ссылка</a>
-      </div>
-      <div class="row">
-        <button class="default-btn">Отправить</button>
-      </div>
-      <div class="row">
-        <input type="text" class="text-field" placeholder="Подсказка" />
-      </div>
-      <div class="row">
-        <h2 class="subtitle">Подзаголовок</h2>
-      </div>
-      <div class="row">
-        <img
-          class="logo"
-          src="img/logo.png"
-          width="80px"
-          alt="Магазин гаджетов"
-        />
-      </div>
-      <div class="row">
-        <form action="" class="callback-form">
-          <input
-            type="tel"
-            name="tel"
-            class="text-field callback-form__inp"
-            placeholder="Подсказка"
-          />
 
-          <button type="submit" class="default-btn callback-form__btn">
-            Отправить
+      <a href="" class="default-link">Ссылка</a>
+
+      <button class="default-btn">Отправить</button>
+
+      <input type="text" class="text-field" placeholder="Подсказка" />
+
+      <h2 class="subtitle">Подзаголовок</h2>
+
+      <img
+        class="logo"
+        src="img/logo.png"
+        width="80px"
+        alt="Магазин гаджетов"
+      />
+
+      <form action="" class="callback-form">
+        <input
+          type="tel"
+          name="tel"
+          class="text-field callback-form__inp"
+          placeholder="Телефон"
+        />
+
+        <button type="submit" class="default-btn callback-form__btn">
+          Отправить
+        </button>
+      </form>
+      <article class="product-card">
+        <img class="product-card__img" src="img/gadget-1.png" alt="Гаджет" />
+        <div class="product-card__body">
+          <div class="product-card__body-top">
+            <h3 class="product-card__title">Iphone-8 64 гб Черный</h3>
+            <strong class="product-card__price">30 200 руб</strong>
+          </div>
+          <button class="default-btn product-card__btn">Купить</button>
+        </div>
+      </article>
+
+      <article class="product-card product-card--big">
+        <img
+          class="product-card__img product-card__img--big"
+          src="img/store-1.jpg"
+          alt="Гаджет"
+        />
+        <div class="product-card__body product-card__body--big">
+          <div class="product-card__body-top">
+            <h3 class="product-card__title">Ноутбук DELL 1846</h3>
+            <strong class="product-card__price product-card__price--big"
+              >88 200 руб</strong
+            >
+          </div>
+          <button class="default-btn product-card__btn product-card__btn--big">
+            Связаться
           </button>
-        </form>
-      </div>
+        </div>
+      </article>
     </div>
   </body>
 </html>
