@@ -33,7 +33,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   color: var(--black-color);
-  background-color: #8d737c;
+  background-color: white;
 }
 
 img {
@@ -115,12 +115,12 @@ a {
 
 .logo {
   display: block;
-  width: 80px;
+  width: 40px;
 }
 
 .menu__list {
   display: flex;
-  background-color: var(--black-color);
+
   align-items: center;
   gap: 50px;
   list-style: none;
@@ -135,17 +135,17 @@ a {
     background-color var(--transition-duration);
 }
 
-.menu-link:focus-visible {
+.menu__link:focus-visible {
   outline: none;
   color: var(--black-color);
   background-color: var(--base-color);
 }
 
-.menu-link:hover {
+.menu__link:hover {
   color: var(--base-color-hover);
 }
 
-.menu-link:active {
+.menu__link:active {
   color: var(--base-color-active);
 }
 
@@ -167,10 +167,11 @@ a {
 }
 
 .product-card__img {
-  height: 180px;
+  display: block;
   flex-shrink: 0;
   width: 100%;
-  object-fit: cover;
+  height: 180px;
+  object-fit: contain;
   border-radius: 12px;
 }
 
@@ -211,6 +212,7 @@ a {
 .product-card__img--big {
   height: 100%;
   border-radius: 12px;
+  object-fit: cover;
 }
 
 .product-card__body--big {
@@ -228,18 +230,145 @@ a {
 }
 
 .product-card__btn--big {
-    width: initial;
+  width: initial;
 }
 
 .container {
-  max-width: 780px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 15px;
+  padding: 0px 15px;
 }
 
+.header {
+  background-color: var(--black-color);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo:focus-visible {
+  opacity: 0.8;
+}
+
+.hero {
+}
+
+.hero__container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 0;
+}
+
+.hero__container::after {
+  content: "";
+  display: block;
+  flex-basis: 470px;
+  height: 340px;
+  background-image: url(../img/welcome.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero__content {
+  flex-basis: 470px;
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 34px;
+}
+
+.hero__desc {
+  max-width: 360px;
+  margin-top: 0;
+  margin-bottom: 48px;
+  font-size: 20px;
+}
+
+.callback {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.callback::before {
+  content: "";
+  display: block;
+  background-image: url(../img/store-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.callback__right {
+  padding: 72px 50px;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(../img/store-2.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.callback__title {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.callback__desc {
+  margin-top: 0;
+  max-width: 424px;
+  margin-bottom: 26px;
+  font-size: 20px;
+}
+.catalog {
+  padding: 80px 0;
+}
+
+.catalog__subtitle {
+  margin-bottom: 60px;
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.catalog__item--big {
+  grid-column: span 2;
+}
+
+.catalog__card {
+  height: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 23px 15px;
+  background-color: var(--black-color);
+}
+
+.footer__logo {
+  opacity: 50%;
+}
 /* Адаптивность: */
 
-@media (max-width: 740px) {
+@media (max-width: 900px) {
   .callback-form {
     flex-direction: column;
   }
@@ -270,5 +399,49 @@ a {
   }
   .product-card__btn--big {
     width: 100%;
-}
+  }
+  .header__container {
+    display: block;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header__menu {
+    padding: 20px 0;
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .header__menu-list {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: fit-content;
+  }
+  .hero__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .hero__container::after {
+    display: none;
+  }
+  .hero__title {
+    font-size: 28px;
+  }
+  .callback {
+    display: block;
+  }
+  .callback__right {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .callback::before {
+    display: none;
+  }
+  .catalog__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
