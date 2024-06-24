@@ -1,21 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
 :root {
-  --black-color: #270c16;
-  --base-color: #c13e6c;
-  --base-color-hover: #cd6589;
-  --base-color-active: #9a3256;
-  --border-color: #8d737c;
-  --placeholder-color: #a75874;
+  --black-color: #cd6589;
+  --base-color: #d36a8e;
+  --base-color-hover: #86234c;
+  --base-color-active: #ffb9dd;
+  --border-color: #ffb9dd;
+  --placeholder-color: #f5704a;
   --transition-duration: 0.3s;
-  --price-color: #463337;
+  --price-color: #bda5ac;
 
   /* Цвета из палитриы base-corol: */
 
-  --color1: #c13e6c;
-  --color2: #f4a48c;
-  --color3: #91123a;
-  --color4: #a06276;
-  --color5: #d4a7b4;
-  --color6: #463337;
+  --color1: #86234c;
+  --color2: #cd6589;
+  --color3: #d36a8e;
+  --color4: #ffb9dd;
+  --color5: #ffb9dd;
+  --color6: #bda5ac;
 }
 
 html {
@@ -30,10 +32,10 @@ html {
 
 body {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   color: var(--black-color);
-  background-color: white;
+  background-color: var(--color5);
 }
 
 img {
@@ -66,7 +68,8 @@ a {
 }
 
 .default-btn {
-  color: var(--black-color);
+  color: var(--base-color-active);
+  font-weight: 500;
   padding: 11px 47px;
   border-radius: 12px;
   background-color: var(--base-color);
@@ -130,6 +133,7 @@ a {
 
 .menu__link {
   color: white;
+  font-weight: bold;
   outline: none;
   transition: color var(--transition-duration),
     background-color var(--transition-duration);
@@ -161,9 +165,9 @@ a {
 .product-card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--color3);
   border-radius: 12px;
-  border: 1px solid var(--border-color);
+  border: 3px solid var(--color6);
 }
 
 .product-card__img {
@@ -189,6 +193,7 @@ a {
 
 .product-card__title {
   margin: 0;
+  color: var(--color5);
   margin-bottom: 10px;
   font-size: 21px;
   font-weight: 700;
@@ -247,6 +252,7 @@ a {
 
 .header__container {
   display: flex;
+  min-height: 80px;
   justify-content: space-between;
   align-items: center;
 }
@@ -369,6 +375,7 @@ a {
 .footer__logo {
   opacity: 50%;
 }
+
 /* Адаптивность: */
 
 @media (max-width: 800px) {
